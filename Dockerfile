@@ -9,4 +9,6 @@ Run pip install -r requirements.txt
 Run pip install gunicorn
 Run pip install gunicorn
 
-ENTRYPOINT ["sh","-x","./gunicornsh.sh"]
+ENTRYPOINT ["gunicorn"  , "-b", ":8080", "main:APP"]
+
+# ENTRYPOINT ["sh","-x","./gunicornsh.sh"]
